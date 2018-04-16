@@ -3,14 +3,13 @@ package com.yoti.springcleaning.entity;
 import lombok.Getter;
 import java.util.HashSet;
 
-public class CartesianRoom {
+public class Room {
 
-    @Getter private final int xMax, yMax;
+    @Getter private final Coordinate maxCoords;
     private final HashSet<Coordinate> dirtPatchCoords;
 
-    public CartesianRoom(int xMax, int yMax, HashSet<Coordinate> dirtPatchCoords){
-        this.xMax = xMax;
-        this.yMax = yMax;
+    public Room(Coordinate maxCoords, HashSet<Coordinate> dirtPatchCoords){
+        this.maxCoords = maxCoords;
         this.dirtPatchCoords = dirtPatchCoords;
     }
 
