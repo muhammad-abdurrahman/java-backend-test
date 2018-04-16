@@ -18,6 +18,7 @@ public class CleaningServiceImpl implements CleaningService {
     public ExecutionResultDto executeCleaningInstructions(List<Integer> roomSize, List<Integer> coords,
                                                           List<List<Integer>> patches, String instructions) {
         HashSet<Coordinate> dirtPatches = getDirtyPatchesCoordinateSetFromList(patches);
+        int initialDirtPatchesSize = dirtPatches.size();
         Room room = new Room(listToCoord(roomSize), dirtPatches);
 
         DirtCollector dirtCollector = new DirtCollector(room, listToCoord(coords));
@@ -28,7 +29,7 @@ public class CleaningServiceImpl implements CleaningService {
         return ExecutionResultDto
                 .builder()
                 .coords(coordToList(dirtCollector.getCurrentLocationInRoom()))
-                .patches(dirtPatches.size() - dirtCollector.getRoom().getDirtPatchSize())
+                .patches(initialDirtPatchesSize - dirtCollector.getRoom().getDirtPatchSize())
                 .build();
     }
 
