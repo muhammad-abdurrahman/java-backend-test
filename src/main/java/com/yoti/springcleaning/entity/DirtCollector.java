@@ -16,7 +16,8 @@ public class DirtCollector {
 
     public Coordinate moveInDirection(CardinalDirections direction){
         this.currentLocationInRoom.translateByDisplacementCoordinate(direction.getDisplacementCoordinates());
-        return normalizeCurrentLocationWithinBoundary();
+        this.room.removeDirtyPatch(normalizeCurrentLocationWithinBoundary());
+        return this.currentLocationInRoom;
     }
 
     private Coordinate normalizeCurrentLocationWithinBoundary(){
