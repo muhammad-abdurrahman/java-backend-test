@@ -20,4 +20,8 @@ public class Room {
     public boolean isCoordinateDirty(Coordinate coordinate){
         return this.dirtPatchCoords.contains(coordinate);
     }
+
+    public int getDirtPatchSize(){
+        return this.dirtPatchCoords.size();
+    }
 }
