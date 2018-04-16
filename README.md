@@ -1,6 +1,6 @@
 ## Introduction
 
-You will write a service that navigates a imaginary robotic hoover (much like a [Roomba](https://en.wikipedia.org/wiki/Roomba)) through an equally imaginary room based on:
+You will write a com.yoti.springcleaning.service that navigates a imaginary robotic hoover (much like a [Roomba](https://en.wikipedia.org/wiki/Roomba)) through an equally imaginary room based on:
 
 * room dimensions as [X and Y coordinates](https://en.wikipedia.org/wiki/Cartesian_coordinate_system), identifying the top right corner of the room rectangle. This room is divided up in a grid based on these dimensions; a room that has dimensions X: 5 and Y: 5 has 5 columns and 5 rows, so 25 possible hoover positions. The bottom left corner is the point of origin for our coordinate system, so as the room contains all coordinates its bottom left corner is defined by X: 0 and Y: 0.
 * locations of patches of dirt, also defined by X and Y coordinates identifying the bottom left corner of those grid positions.
@@ -15,7 +15,7 @@ Driving into a wall has no effect (the robot skids in place).
 
 ## Goal
 
-The goal of the service is to take the room dimensions, the locations of the dirt patches, the hoover location and the driving instructions as input and to then output the following:
+The goal of the com.yoti.springcleaning.service is to take the room dimensions, the locations of the dirt patches, the hoover location and the driving instructions as input and to then output the following:
 
 * The final hoover position (X, Y)
 * The number of patches of dirt the robot cleaned up
@@ -56,9 +56,9 @@ Moreover, the services persists every input and output to a database.
 
 ## Deliverable
 
-The service:
+The com.yoti.springcleaning.service:
 
-* is a web service
+* is a web com.yoti.springcleaning.service
 * must run on Mac OS X or Linux (x86-64) 
 * must be written in Java
 * can make use of any existing open source libraries that don't directly address the problem statement (use your best judgement).
