@@ -20,6 +20,11 @@ public class DirtCollector {
         return this.currentLocationInRoom;
     }
 
+    /**
+     * Normalize the current location of dirtCollector within the room's boundaries
+     * such that if the location is out of bounds, bring it back within the bounds.
+     * @return the current location of dirtCollector within the room
+     */
     private Coordinate normalizeCurrentLocationWithinBoundary(){
         if (this.currentLocationInRoom.getX() > 0
                 && this.currentLocationInRoom.getX() <= this.room.getMaxCoords().getX()
