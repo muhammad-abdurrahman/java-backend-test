@@ -31,6 +31,9 @@ The data model consists of 5 tables:
 The `spring_clean` table contains foreign keys to the inputs and outputs.
 
 The `input_patches` table is a weak entity between `input` and `coordinate` table representing a many-to-many relationship.
+
+#
+The project uses `lombok` (https://projectlombok.org/) thus in order for your IDE to recognise this, please ensure you install the respective lombok plugin. This can be obtained from the lombok website.
 ## Introduction
 
 You will write a com.yoti.springcleaning.service that navigates a imaginary robotic hoover (much like a [Roomba](https://en.wikipedia.org/wiki/Roomba)) through an equally imaginary room based on:
