@@ -1,3 +1,11 @@
+## Spring Clean Application
+To run the application run the following commands from the root directory of the application:
+
+- Windows
+    * `.\mvnw.cmd clean spring-boot:run`
+- OSX/Linux
+    * `./mvnw clean spring-boot:run`
+
 ## Introduction
 
 You will write a com.yoti.springcleaning.service that navigates a imaginary robotic hoover (much like a [Roomba](https://en.wikipedia.org/wiki/Roomba)) through an equally imaginary room based on:
