@@ -2,10 +2,35 @@
 To run the application run the following commands from the root directory of the application:
 
 - Windows
-    * `.\mvnw.cmd clean spring-boot:run`
+    * `.\mvnw.cmd clean install spring-boot:run`
 - OSX/Linux
-    * `./mvnw clean spring-boot:run`
+    * `./mvnw clean install spring-boot:run`
 
+The application is run as a fat jar and is served on port 8080 by the embedded Tomcat Servlet container.
+
+To execute the cleaning computation, send an Http POST request to `http://ocalhost:8080/spring-cleaner/execute` (the JSON payload for this request follows the specification below)
+
+The server will respond with the output as well as persist the input and output in an in-memory database (h2) which can be accessed at the following url: `http://http://localhost:8080/h2`
+#
+
+To access the database please ensure the following at the H2 console login page:
+* Driver Class: `org.h2.Driver`
+* JDBC URL: `jdbc:h2:mem:spring-clean`
+* User Name: `user`
+* Password: [leave blank]
+
+#
+
+The data model consists of 5 tables:
+  * spring_clean
+  * input
+  * output
+  * input_patches
+  * coordinate
+  
+The `spring_clean` table contains foreign keys to the inputs and outputs.
+
+The `input_patches` table is a weak entity between `input` and `coordinate` table representing a many-to-many relationship.
 ## Introduction
 
 You will write a com.yoti.springcleaning.service that navigates a imaginary robotic hoover (much like a [Roomba](https://en.wikipedia.org/wiki/Roomba)) through an equally imaginary room based on:
