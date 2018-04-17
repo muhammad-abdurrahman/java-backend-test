@@ -8,7 +8,7 @@ To run the application run the following commands from the root directory of the
 
 The application is run as a fat jar and is served on port 8080 by the embedded Tomcat Servlet container.
 
-To execute the cleaning computation, send an Http POST request to `http://ocalhost:8080/spring-cleaner/execute` (the JSON payload for this request follows the specification below)
+To execute the cleaning computation, send an Http POST request to `http://localhost:8080/spring-cleaner/execute` (the JSON payload for this request follows the specification below)
 
 The server will respond with the output as well as persist the input and output in an in-memory database (h2) which can be accessed at the following url: `http://http://localhost:8080/h2`
 #
