@@ -22,19 +22,19 @@ import static org.mockito.Mockito.when;
 public class CleaningServiceImplTest {
 
     @Mock
-    SpringCleanRepository springCleanRepo;
+    private SpringCleanRepository springCleanRepo;
 
     @Mock
-    CoordinateRepository coordinateRepo;
+    private CoordinateRepository coordinateRepo;
 
     @Mock
-    InputPatchesRepository inputPatchesRepo;
+    private InputPatchesRepository inputPatchesRepo;
 
     @Mock
-    InputRepository inputRepo;
+    private InputRepository inputRepo;
 
     @Mock
-    OutputRepository outputRepo;
+    private OutputRepository outputRepo;
 
     @InjectMocks
     private CleaningServiceImpl cleaningService;
