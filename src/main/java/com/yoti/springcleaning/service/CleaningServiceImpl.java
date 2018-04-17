@@ -67,11 +67,6 @@ public class CleaningServiceImpl implements CleaningService {
                         .x(roomSize.get(0))
                         .y(roomSize.get(1))
                         .build()))
-                .roomSize(coordinateRepo.save(com.yoti.springcleaning.persistence.Coordinate
-                        .builder()
-                        .x(coords.get(0))
-                        .y(coords.get(1))
-                        .build()))
                 .instructions(instructions)
                 .build());
 
