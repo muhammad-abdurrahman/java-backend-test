@@ -10,7 +10,7 @@ The application is run as a fat jar and is served on port 8080 by the embedded T
 
 To execute the cleaning computation, send an Http POST request to `http://localhost:8080/spring-cleaner/execute` (the JSON payload for this request follows the specification below)
 
-The server will respond with the output as well as persist the input and output in an in-memory database (h2) which can be accessed at the following url: `http://http://localhost:8080/h2`
+The server will respond with the output as well as persist the input and output in an in-memory database (h2) which can be accessed at the following url: `http://localhost:8080/h2`
 #
 
 To access the database please ensure the following at the H2 console login page:
