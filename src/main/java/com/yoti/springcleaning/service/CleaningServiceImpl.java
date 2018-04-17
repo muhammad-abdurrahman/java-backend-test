@@ -46,7 +46,7 @@ public class CleaningServiceImpl implements CleaningService {
 
         DirtCollector dirtCollector = new DirtCollector(room, listToCoord(coords));
 
-        Arrays.stream(instructions.split("")).forEach(direction ->
+        Arrays.stream(instructions.split("")).map(String::toUpperCase).forEach(direction ->
                 dirtCollector.moveInDirection(CardinalDirections.valueOf(direction)));
 
         ExecutionResultDto executionResult = ExecutionResultDto
